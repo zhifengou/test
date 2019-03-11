@@ -21,8 +21,10 @@ export default class Form extends Component{
     return(
       <form className="center" onSubmit= {this.submitHandler}>
         <input className="center" type="text" name="img" value={img} placeholder="Enter Url" onChange = {this.changeHandler}/><br></br>
-        <input className="center" type="text" name="name" value={name} placeholder="Name" onChange= {this.changeHandler}/>
-        <button className="button">New Post</button>
+      <div className="center">
+      <input className="fl" type="text" name="name" value={name} placeholder="Name" onChange= {this.changeHandler}/>
+        <button className="button fr">New Post</button>
+      </div>
       </form>
     )
   }

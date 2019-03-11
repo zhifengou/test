@@ -7,6 +7,15 @@ class App extends Component {
   state = {
     images: []
   };
+  clickHandler = imgObj => {
+      let copyArr = [...this.state.images].filter(copyimgObj => {
+        return copyimgObj !== imgObj;
+      });
+      console.log(copyArr);
+      this.setState({
+        images: copyArr
+      });
+    };
 
   submitHandler = obj => {
     let copyArr = [...this.state.images, obj];
